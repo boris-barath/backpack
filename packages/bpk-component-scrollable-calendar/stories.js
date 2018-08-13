@@ -215,78 +215,78 @@ storiesOf('bpk-component-scrollable-calendar', module)
       formatMonth={formatMonth}
       formatDateFull={formatDateFull}
       daysOfWeek={weekDays}
-      changeMonthLabel="Change month"
       showWeekendSeparator={false}
+      selectTodaysDate
       minDate={DateUtils.addDays(new Date(), -1)}
       maxDate={DateUtils.addMonths(new Date(), 12)}
     />
   ))
-  .add('Calendar - Week starts on a Sunday', () => (
-    <BpkCalendar
+  .add('Scrollable Calendar - Week starts on a Sunday', () => (
+    <ScrollableCal
       id="myCalendar"
       formatMonth={formatMonth}
       formatDateFull={formatDateFull}
       daysOfWeek={weekDays}
-      changeMonthLabel="Change month"
       weekStartsOn={0}
+      selectTodaysDate
       minDate={DateUtils.addDays(new Date(), -1)}
       maxDate={DateUtils.addMonths(new Date(), 12)}
     />
   ))
-  .add('Calendar - Honest weekend', () => (
-    <BpkCalendar
+  .add('Scrollable Calendar - Honest weekend', () => (
+    <ScrollableCal
       id="myCalendar"
       formatMonth={formatMonth}
       formatDateFull={formatDateFull}
       daysOfWeek={weekDaysMoreWeekend}
-      changeMonthLabel="Change month"
+      selectTodaysDate
       minDate={DateUtils.addDays(new Date(), -1)}
       maxDate={DateUtils.addMonths(new Date(), 12)}
     />
   ))
-  .add('Calendar - ar-AE locale', () => (
-    <BpkCalendar
+  .add('Scrollable Calendar - ar-AE locale', () => (
+    <ScrollableCal
       id="myCalendar"
       formatMonth={formatMonthArabic}
       formatDateFull={formatDateFullArabic}
       daysOfWeek={weekDaysArabic}
-      changeMonthLabel="Change month"
       weekStartsOn={6}
+      selectTodaysDate
       minDate={DateUtils.addDays(new Date(), -1)}
       maxDate={DateUtils.addMonths(new Date(), 12)}
     />
   ))
-  .add('Calendar - ja-JP locale', () => (
-    <BpkCalendar
+  .add('Scrollable Calendar - ja-JP locale', () => (
+    <ScrollableCal
       id="myCalendar"
       formatMonth={formatMonthJapanese}
       formatDateFull={formatDateFullJapanese}
       daysOfWeek={weekDaysJapanese}
-      changeMonthLabel="Change month"
       weekStartsOn={0}
+      selectTodaysDate
       minDate={DateUtils.addDays(new Date(), -1)}
       maxDate={DateUtils.addMonths(new Date(), 12)}
     />
   ))
-  .add('Calendar - Different min/max date', () => (
-    <BpkCalendar
+  .add('Scrollable Calendar - Different min/max date', () => (
+    <ScrollableCal
       id="myCalendar"
       formatMonth={formatMonth}
       formatDateFull={formatDateFull}
       daysOfWeek={weekDays}
-      changeMonthLabel="Change month"
+      selectTodaysDate
       minDate={new Date(2020, 4, 15)}
       maxDate={new Date(2020, 5, 15)}
     />
   ))
-  .add("Calendar - Don't mark today", () => (
-    <BpkCalendar
+  .add("Scrollable Calendar - Don't mark today", () => (
+    <ScrollableCal
       id="myCalendar"
       formatMonth={formatMonth}
       formatDateFull={formatDateFull}
       daysOfWeek={weekDays}
-      changeMonthLabel="Change month"
       markToday={false}
+      selectTodaysDate
       minDate={DateUtils.addDays(new Date(), -1)}
       maxDate={DateUtils.addMonths(new Date(), 12)}
     />
