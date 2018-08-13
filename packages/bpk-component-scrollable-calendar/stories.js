@@ -208,4 +208,86 @@ storiesOf('bpk-component-scrollable-calendar', module)
       minDate={DateUtils.addDays(new Date(), -1)}
       maxDate={DateUtils.addMonths(new Date(), 12)}
     />
+  ))
+  .add("Calendar - Don't show weekend separator", () => (
+    <BpkCalendar
+      id="myCalendar"
+      formatMonth={formatMonth}
+      formatDateFull={formatDateFull}
+      daysOfWeek={weekDays}
+      changeMonthLabel="Change month"
+      showWeekendSeparator={false}
+      minDate={DateUtils.addDays(new Date(), -1)}
+      maxDate={DateUtils.addMonths(new Date(), 12)}
+    />
+  ))
+  .add('Calendar - Week starts on a Sunday', () => (
+    <BpkCalendar
+      id="myCalendar"
+      formatMonth={formatMonth}
+      formatDateFull={formatDateFull}
+      daysOfWeek={weekDays}
+      changeMonthLabel="Change month"
+      weekStartsOn={0}
+      minDate={DateUtils.addDays(new Date(), -1)}
+      maxDate={DateUtils.addMonths(new Date(), 12)}
+    />
+  ))
+  .add('Calendar - Honest weekend', () => (
+    <BpkCalendar
+      id="myCalendar"
+      formatMonth={formatMonth}
+      formatDateFull={formatDateFull}
+      daysOfWeek={weekDaysMoreWeekend}
+      changeMonthLabel="Change month"
+      minDate={DateUtils.addDays(new Date(), -1)}
+      maxDate={DateUtils.addMonths(new Date(), 12)}
+    />
+  ))
+  .add('Calendar - ar-AE locale', () => (
+    <BpkCalendar
+      id="myCalendar"
+      formatMonth={formatMonthArabic}
+      formatDateFull={formatDateFullArabic}
+      daysOfWeek={weekDaysArabic}
+      changeMonthLabel="Change month"
+      weekStartsOn={6}
+      minDate={DateUtils.addDays(new Date(), -1)}
+      maxDate={DateUtils.addMonths(new Date(), 12)}
+    />
+  ))
+  .add('Calendar - ja-JP locale', () => (
+    <BpkCalendar
+      id="myCalendar"
+      formatMonth={formatMonthJapanese}
+      formatDateFull={formatDateFullJapanese}
+      daysOfWeek={weekDaysJapanese}
+      changeMonthLabel="Change month"
+      weekStartsOn={0}
+      minDate={DateUtils.addDays(new Date(), -1)}
+      maxDate={DateUtils.addMonths(new Date(), 12)}
+    />
+  ))
+  .add('Calendar - Different min/max date', () => (
+    <BpkCalendar
+      id="myCalendar"
+      formatMonth={formatMonth}
+      formatDateFull={formatDateFull}
+      daysOfWeek={weekDays}
+      changeMonthLabel="Change month"
+      minDate={new Date(2020, 4, 15)}
+      maxDate={new Date(2020, 5, 15)}
+    />
+  ))
+  .add("Calendar - Don't mark today", () => (
+    <BpkCalendar
+      id="myCalendar"
+      formatMonth={formatMonth}
+      formatDateFull={formatDateFull}
+      daysOfWeek={weekDays}
+      changeMonthLabel="Change month"
+      markToday={false}
+      minDate={DateUtils.addDays(new Date(), -1)}
+      maxDate={DateUtils.addMonths(new Date(), 12)}
+    />
   ));
